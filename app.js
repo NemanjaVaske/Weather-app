@@ -10,10 +10,22 @@ const weatherApp = async () => {
       { mode: "cors" }
     );
     if (data.status >= 200 && data.status <= 299) {
-      const result = await data.json();
-      console.log(result);
+      const { main, wind, weather } = await data.json();
+
+      const weatherCity = document.getElementById("weather-city");
+      const weatherDesc = document.getElementById("weather-desc");
+      const weatherTemp = document.getElementById("weather-temp");
+      const weatherWind = document.getElementById("weather-wind");
+
+      weatherCity.textContent = `Here is weather for ${cityName}`;
+      weatherDesc.textContent = `${weather[0].description} `;
+      weatherTemp.textContent = `Temp: ${main.temp} °C`;
+      weatherWind.textContent = `Wind speed: ${((wind.speed * 18) / 5).toFixed(
+        2
+      )} km/h`;
     } else {
-      console.log("There is no such city");
+      const weatherCity = document.getElementById("weather-city");
+      weatherCity.textContent = "That city don't exist, search again!";
     }
   } catch (error) {
     console.log(error);

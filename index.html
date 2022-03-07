@@ -5,14 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Wheather App</title>
+    <title>Weather App</title>
   </head>
   <body>
     <form class="form">
-      <label>Enter city name to see it Wheater Info</label>
+      <label>Enter city name to see it Weather Info</label>
       <input type="text" required id="location" />
-      <button type="submit">Get wheather info</button>
+      <button type="submit">Get weather info</button>
     </form>
+    <div class="weather-info">
+      <span class="weather-city" id="weather-city"></span>
+      <span class="weather-desc" id="weather-desc"></span>
+      <span class="weather-temp" id="weather-temp"></span>
+      <span class="weather-wind" id="weather-wind"></span>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>

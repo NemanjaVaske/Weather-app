@@ -3,3 +3,7 @@
   flex-direction: column;
   width: 250px;
 }
+.weather-info {
+  display: flex;
+  flex-direction: column;
+}
