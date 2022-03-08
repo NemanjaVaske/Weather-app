@@ -25,6 +25,7 @@ const weatherApp = async () => {
     } else {
       const weatherCity = document.getElementById("weather-city");
       weatherCity.textContent = "That city don't exist, search again!";
+
       weatherDesc.textContent = "";
       weatherTemp.textContent = "";
       weatherWind.textContent = "";
